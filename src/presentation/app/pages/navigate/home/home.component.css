@@ -1,0 +1,31 @@
+/* home.component.css */
+.sidenav-container {
+  height: 100%;
+  width: 100%;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.kpi-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.kpi-card {
+  width: 300px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-form-field {
+  margin-right: 16px;
+}

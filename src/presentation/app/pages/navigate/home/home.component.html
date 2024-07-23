@@ -1,0 +1,70 @@
+<mat-sidenav-container class="sidenav-container">
+    <!-- Menú lateral -->
+    <mat-sidenav #sidenav mode="side" class="sidenav">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/home">Home</a>
+            <a mat-list-item routerLink="/profile">Profile</a>
+            <!-- Agrega más opciones aquí -->
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <!-- Contenido principal -->
+    <mat-sidenav-content>
+        <!-- Navbar -->
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>Home</span>
+            <span class="spacer"></span>
+            <mat-form-field appearance="fill">
+                <mat-label>Search</mat-label>
+                <input matInput placeholder="Search">
+                <button mat-icon-button matSuffix aria-label="Search">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </mat-form-field>
+            <button mat-button (click)="openLogoutDialog()">Logout</button>
+        </mat-toolbar>
+
+        <div class="content">
+            <!-- Tarjeta de información -->
+            <mat-card class="info-card">
+                <mat-card-header>
+                    <mat-card-title>Information</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>This is an important message inside the card.</p>
+                </mat-card-content>
+            </mat-card>
+
+            <!-- Contenedor para KPIs utilizando grid -->
+            <mat-grid-list cols="3" rowHeight="1:1" gutterSize="16px" class="kpi-grid">
+                <mat-grid-tile>
+                    <mat-card class="kpi-card">
+                        <mat-card-header>
+                            <mat-card-title>KPI 1</mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>Details about KPI 1</p>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-card class="kpi-card">
+                        <mat-card-header>
+                            <mat-card-title>KPI 2</mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p>Details about KPI 2</p>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-grid-tile>
+                <!-- Agrega más tarjetas KPI aquí si es necesario -->
+            </mat-grid-list>
+
+            <!-- Botón para abrir modal -->
+            <button mat-raised-button color="primary" (click)="openInfoDialog()">More Info</button>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
