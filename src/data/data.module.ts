@@ -9,8 +9,8 @@ import { UserLoginUseCase } from '@domain/usecases/user/user-login.usecase';
 import { UserImplementationRepository } from './repositories/user/user-implementation.repository';
 import { AuthLoginUseCase } from '@domain/usecases/auth/auth-login.usecase';
 import { AuthRepository } from '@domain/repositories/auth.repository';
-import { AuthImplementationRepository } from './repositories/autentications/user-firebase-implementation.repository';
-import { LogoutSessionUseCase } from '@domain/usecases/auth/auth-Logout.usecase';
+import { AuthImplementationRepository } from './repositories/autentications/auth-implementation.repository';
+import { LogoutSessionUseCase } from '@domain/usecases/auth/auth-logout.usecase';
 import { GetSessionUseCase } from '@domain/usecases/auth/auth-session.usecase';
 
 const userLoginUseCaseFactory = (userRepo: UserRepository) => new UserLoginUseCase(userRepo);

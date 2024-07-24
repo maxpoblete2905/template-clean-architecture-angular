@@ -1,14 +1,17 @@
 import { Observable } from 'rxjs';
 import { UseCase } from '@base/use-case';
 import { AuthRepository } from '@domain/repositories/auth.repository';
-import { AuthCredential } from '@data/repositories/autentications/entities/auth-send.entity';
-import { AuthResponse } from '@data/repositories/autentications/entities/auth-result.entity';
+import { AuthCredential } from '@data/repositories/autentications/entities/auth-credential.entity';
+import { AuthResponse } from '@data/repositories/autentications/entities/auth-response.entity';
+import { Injectable } from '@angular/core';
 
-export class AuthLoginUseCase implements UseCase<AuthCredential, AuthResponse> {
+@Injectable()
+export class AuthLoginUseCase
+  implements UseCase<AuthCredential, AuthResponse | null>
+{
+  constructor(private userRepository: AuthRepository) {}
 
-    constructor(private userRepository: AuthRepository) { }
-
-    execute(params: AuthCredential): Observable<AuthResponse> {
-        return this.userRepository.signIn(params);
-    }
+  execute(params: AuthCredential): Observable<AuthResponse | null> {
+    return this.userRepository.signIn(params);
+  }
 }

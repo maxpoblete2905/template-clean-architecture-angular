@@ -1,13 +1,14 @@
 import { Observable } from 'rxjs';
 import { UseCase } from '@base/use-case';
 import { AuthRepository } from '@domain/repositories/auth.repository';
-import { AuthResponse } from '@data/repositories/autentications/entities/auth-result.entity';
+import { AuthResponse } from '@data/repositories/autentications/entities/auth-response.entity';
+import { Injectable } from '@angular/core';
 
-export class GetSessionUseCase implements UseCase<any, AuthResponse> {
+@Injectable()
+export class GetSessionUseCase implements UseCase<any, AuthResponse | null> {
+  constructor(private userRepository: AuthRepository) {}
 
-    constructor(private userRepository: AuthRepository) { }
-
-    execute(): Observable<AuthResponse> {
-        return this.userRepository.getCurrentUser();
-    }
+  execute(): Observable<AuthResponse | null> {
+    return this.userRepository.getCurrentUser();
+  }
 }

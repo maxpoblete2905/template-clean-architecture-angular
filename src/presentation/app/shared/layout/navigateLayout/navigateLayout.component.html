@@ -1,0 +1,34 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Menú lateral -->
+  <mat-sidenav #sidenav mode="side" class="sidenav">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home">Home</a>
+      <a mat-list-item routerLink="/profile">Profile</a>
+      <!-- Agrega más opciones aquí -->
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Contenido principal -->
+  <mat-sidenav-content>
+    <!-- Navbar -->
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Home</span>
+      <span class="spacer"></span>
+      <mat-form-field appearance="fill">
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Search" />
+        <button mat-icon-button matSuffix aria-label="Search">
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+      <button mat-button (click)="openLogoutDialog()">Logout</button>
+    </mat-toolbar>
+
+    <div class="content">
+      <router-outlet />
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

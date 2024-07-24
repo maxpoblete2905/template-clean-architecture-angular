@@ -1,15 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { SharedModule } from './shared/shared.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatButtonModule, MatInputModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [RouterOutlet, SharedModule, RouterLink],
+  template: `<router-outlet />`,
 })
-export class AppComponent {
-  title = 'demo-architecture-clean-stanalone-components';
-}
+export class AppComponent {}
