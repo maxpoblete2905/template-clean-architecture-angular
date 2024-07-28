@@ -1,0 +1,26 @@
+<mat-nav-list>
+  <ng-container *ngFor="let item of menuItems">
+    <mat-expansion-panel *ngIf="item.subMenu">
+      <mat-expansion-panel-header>
+        <mat-panel-title [routerLink]="item.route">
+          <img class="app-logo" [src]="item.icon" [alt]="item.label" />
+          <span>{{ item.label }}</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <a
+          *ngFor="let subItem of item.subMenu"
+          mat-list-item
+          [routerLink]="subItem.route"
+        >
+          <img
+            class="app-logo-small"
+            [src]="subItem.icon"
+            [alt]="subItem.label"
+          />
+          <span>{{ subItem.label }}</span>
+        </a>
+      </mat-nav-list>
+    </mat-expansion-panel>
+  </ng-container>
+</mat-nav-list>

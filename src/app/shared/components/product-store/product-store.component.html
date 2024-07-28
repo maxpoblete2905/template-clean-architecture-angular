@@ -1,0 +1,28 @@
+<div class="product-container">
+  <mat-card *ngFor="let product of products" class="product-card">
+    <mat-card-header class="product-card-header">
+      <mat-card-title class="product-card-title">{{
+        product.name
+      }}</mat-card-title>
+      <mat-card-subtitle class="product-card-subtitle">{{
+        product.category
+      }}</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      [src]="product.images[0]"
+      [alt]="product.name"
+      class="product-card-image"
+    />
+    <mat-card-content class="product-card-content">
+      <p>{{ product.description }}</p>
+      <p><strong>Price:</strong> ${{ product.price }}</p>
+      <p><strong>In Stock:</strong> {{ product.inStock ? "Yes" : "No" }}</p>
+    </mat-card-content>
+    <mat-card-actions class="product-card-actions">
+      <button mat-raised-button color="primary" (click)="viewMore(product)">
+        View More
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

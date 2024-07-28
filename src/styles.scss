@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global para el cuerpo del documento */
+body {
+  margin: 0;
+  background-color: #000000; /* Cambia esto al color de fondo deseado */
+  color: #ffffff; /* Cambia esto al color de texto deseado */
+  font-family: "Roboto", sans-serif; /* Fuente predeterminada */
+  line-height: 1.6; /* Altura de línea */
+}

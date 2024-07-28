@@ -1,0 +1,67 @@
+/* Estilo general del contenedor del menú */
+mat-nav-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Estilo del panel de expansión */
+mat-expansion-panel {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  border: none; /* Elimina el borde predeterminado */
+}
+
+/* Estilo del encabezado del panel de expansión */
+mat-expansion-panel-header {
+  background: transparent; /* Elimina el color de fondo */
+  border-bottom: 1px solid #ddd; /* Línea separadora en el encabezado */
+  padding: 16px 24px; /* Espaciado interno del encabezado */
+  font-size: 16px; /* Tamaño de fuente del encabezado */
+  transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+mat-expansion-panel-header:hover {
+  background-color: #f5f5f5; /* Color de fondo al pasar el cursor */
+}
+
+mat-panel-title {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo de los iconos del encabezado del panel */
+.app-logo {
+  width: 36px;
+  height: 36px;
+  margin-right: 16px; /* Mayor espacio entre ícono y texto */
+}
+
+/* Estilo de la lista dentro del panel de expansión */
+mat-nav-list {
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo de los elementos de la lista del submenú */
+mat-nav-list a {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px; /* Mayor espaciado interno de los elementos de la lista */
+  font-size: 14px; /* Tamaño de fuente */
+  color: #333; /* Color del texto */
+  text-decoration: none; /* Elimina el subrayado del texto */
+  border-bottom: 1px solid #ddd; /* Línea separadora entre elementos */
+  margin-bottom: 8px; /* Espacio inferior entre elementos */
+}
+
+mat-nav-list a:hover {
+  background-color: #f5f5f5; /* Color de fondo al pasar el cursor */
+}
+
+.app-logo-small {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px; /* Mayor espacio entre ícono y texto */
+}

@@ -1,0 +1,71 @@
+<div class="login-container">
+  <h2>Iniciar sesión</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+    <shared-message-alerts
+      *ngIf="messageStatus.showMessage"
+      [messageStatus]="messageStatus"
+    />
+
+    <mat-form-field appearance="fill">
+      <mat-label>Correo electrónico</mat-label>
+      <input
+        matInput
+        formControlName="email"
+        type="email"
+        placeholder="Introduce tu correo"
+      />
+      <div #iconContainer></div>
+      <mat-error *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+        <ng-container *ngIf="email?.errors?.['required']">
+          El correo electrónico es obligatorio.
+        </ng-container>
+        <ng-container *ngIf="email?.errors?.['email']">
+          Introduce un correo electrónico válido.
+        </ng-container>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input
+        matInput
+        formControlName="password"
+        type="password"
+        placeholder="Introduce tu contraseña"
+      />
+      <mat-error
+        *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+      >
+        <ng-container *ngIf="password?.errors?.['required']">
+          La contraseña es obligatoria.
+        </ng-container>
+      </mat-error>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="loginForm.invalid"
+    >
+      Iniciar sesión
+    </button>
+  </form>
+
+  <div class="actions">
+    <button mat-stroked-button color="accent" (click)="loginWithGoogle()">
+      <img class="icon" src="/assets/icons/google.svg" alt="Icono SVG" />
+      Iniciar con Google
+    </button>
+    <!-- <button mat-stroked-button color="black" (click)="loginWithGitHub()">
+      <img class="icon" src="/assets/icons/github.svg" alt="Icono SVG" />
+      Iniciar con GitHub
+    </button> -->
+    <button mat-button color="warn" (click)="forgotPassword()">
+      Recuperar contraseña
+    </button>
+    <button mat-button color="primary" (click)="createAccount()">
+      Crear cuenta
+    </button>
+  </div>
+</div>

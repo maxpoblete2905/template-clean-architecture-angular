@@ -1,0 +1,15 @@
+<mat-sidenav-container class="navigate-content">
+  <!-- Menú lateral -->
+  <mat-sidenav #sidenav mode="side" class="sidenav-content">
+    <app-side-nav></app-side-nav>
+  </mat-sidenav>
+
+  <!-- Contenido principal -->
+  <mat-sidenav-content class="main-content">
+    <!-- Navbar -->
+    <app-header [sidenav]="sidenav"></app-header>
+
+    <!-- Contenido -->
+    <app-content />
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,116 @@
+<mat-card>
+  <!-- Toolbar con el título -->
+  <mat-toolbar color="primary">
+    <mat-icon>star</mat-icon>
+    <span class="title">Registro en SportLink</span>
+  </mat-toolbar>
+
+  <!-- Contenido del card -->
+  <mat-card-content>
+    <!-- Subtítulo y descripción -->
+    <div class="header">
+      <h2 class="subtitle">Crea tu cuenta en SportLink</h2>
+      <p class="description">
+        Completa el formulario a continuación para comenzar con SportLink. Si
+        tienes algún problema, por favor contacta al soporte.
+      </p>
+    </div>
+
+    <!-- Formulario -->
+    <form [formGroup]="formRegistro" (ngSubmit)="submitRegistro()">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Correo electrónico</mat-label>
+        <input matInput formControlName="email" id="email" type="email" />
+        <mat-error
+          *ngIf="
+            formRegistro.get('email')?.invalid &&
+            formRegistro.get('email')?.touched
+          "
+        >
+          Por favor, ingresa una dirección de correo electrónico válida.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Número de teléfono</mat-label>
+        <input
+          matInput
+          formControlName="phoneNumber"
+          id="phoneNumber"
+          type="text"
+        />
+        <mat-error
+          *ngIf="
+            formRegistro.get('phoneNumber')?.invalid &&
+            formRegistro.get('phoneNumber')?.touched
+          "
+        >
+          El número de teléfono es obligatorio.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Contraseña</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          id="password"
+          type="password"
+        />
+        <mat-error
+          *ngIf="
+            formRegistro.get('password')?.invalid &&
+            formRegistro.get('password')?.touched
+          "
+        >
+          La contraseña es obligatoria y debe tener al menos 6 caracteres.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Nombre</mat-label>
+        <input
+          matInput
+          formControlName="displayName"
+          id="displayName"
+          type="text"
+        />
+        <mat-error
+          *ngIf="
+            formRegistro.get('displayName')?.invalid &&
+            formRegistro.get('displayName')?.touched
+          "
+        >
+          El nombre es obligatorio.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>URL de foto</mat-label>
+        <input matInput formControlName="photoURL" id="photoURL" type="text" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Roles</mat-label>
+        <mat-select formControlName="roles" id="roles" multiple>
+          <mat-option value="user">Usuario</mat-option>
+          <mat-option value="admin">Administrador</mat-option>
+        </mat-select>
+        <mat-error
+          *ngIf="
+            formRegistro.get('roles')?.invalid &&
+            formRegistro.get('roles')?.touched
+          "
+        >
+          Se debe seleccionar al menos un rol.
+        </mat-error>
+      </mat-form-field>
+
+      <div class="full-width">
+        <button mat-raised-button color="primary" type="submit">
+          Registrar
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

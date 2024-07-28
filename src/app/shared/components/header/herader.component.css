@@ -1,0 +1,41 @@
+.mat-toolbar {
+  align-items: center;
+  background-color: rgb(142, 142, 225);
+  padding-top: 15px;
+  min-height: 80px;
+  max-height: 100px;
+}
+
+.app-logo {
+  width: 55px;
+  height: 55px;
+  margin-right: 16px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.search-field {
+  width: 350px;
+  padding-right: 15%;
+}
+
+.user-info {
+  margin-right: 16px;
+  text-align: right;
+}
+
+.user-info span {
+  display: block;
+}
+
+.user-info .role {
+  font-size: 12px;
+  color: #ccc;
+}

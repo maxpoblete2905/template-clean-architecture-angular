@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <img
+    class="app-logo"
+    src="assets/icons/logo.png"
+    alt="App Logo"
+    class="app-logo"
+  />
+  <button mat-icon-button (click)="toggleSidenav()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="title">Smart Pet Solutions</span>
+  <span class="spacer"></span>
+  <mat-form-field class="search-field" appearance="outline">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="Search" />
+    <button mat-icon-button matSuffix aria-label="Search">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+  <div class="user-info">
+    <span>Hello, nombre</span>
+    <span class="role">role</span>
+  </div>
+  <button mat-button (click)="openLogoutDialog()">Logout</button>
+</mat-toolbar>

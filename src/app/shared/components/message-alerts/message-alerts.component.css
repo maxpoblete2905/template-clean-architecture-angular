@@ -1,0 +1,19 @@
+/* Estilo para errores */
+.alert-error {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fedcdc;
+  color: #b70d0d;
+}
+
+/* Estilo para éxitos */
+.alert-success {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #e2f8af;
+  color: #11b553;
+}

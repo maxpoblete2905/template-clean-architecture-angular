@@ -1,0 +1,6 @@
+<div
+  *ngIf="messageStatus.showMessage"
+  [ngClass]="'alert-' + messageStatus.class"
+>
+  {{ messageStatus.message }}
+</div>

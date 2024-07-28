@@ -1,0 +1,102 @@
+.login-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+h2 {
+  text-align: center;
+  color: #3f51b5;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-form-field mat-label {
+  color: #3f51b5;
+}
+
+mat-form-field mat-error {
+  color: #f44336;
+}
+
+.error-message {
+  color: #f44336;
+  background-color: #ffebee;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.actions button {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.mat-stroked-button {
+  border: 1px solid;
+}
+
+.mat-stroked-button.google {
+  border-color: #4285f4;
+  color: #4285f4;
+}
+
+.mat-stroked-button.github {
+  border-color: #333;
+  color: #333;
+}
+
+.mat-button.warn {
+  color: #f44336;
+}
+
+/* component-name.component.css */
+.error-message {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white; /* Para el texto en blanco */
+}
+
+.error {
+  background-color: red;
+}
+
+.success {
+  background-color: green;
+}

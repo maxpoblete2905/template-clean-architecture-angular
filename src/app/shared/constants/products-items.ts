@@ -1,0 +1,248 @@
+import { Product } from '@shared/interface';
+
+// Create a list of pet products using the Product interface
+export const products: Product[] = [
+  {
+    id: 1,
+    name: 'Dog Food',
+    description: '10kg bag of premium food for adult dogs',
+    price: 50,
+    inStock: true,
+    category: 'Dogs',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Dog+Food+1',
+      'https://via.placeholder.com/300x200.png?text=Dog+Food+2',
+    ],
+  },
+  {
+    id: 2,
+    name: 'Cat Scratcher',
+    description: '1-meter high scratcher with multiple platforms',
+    price: 75,
+    inStock: true,
+    category: 'Cats',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Cat+Scratcher+1',
+      'https://via.placeholder.com/300x200.png?text=Cat+Scratcher+2',
+    ],
+  },
+  {
+    id: 3,
+    name: 'Bird Cage',
+    description: 'Spacious cage for small birds with included accessories',
+    price: 120,
+    inStock: false,
+    category: 'Birds',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Bird+Cage+1',
+      'https://via.placeholder.com/300x200.png?text=Bird+Cage+2',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Aquarium',
+    description: '50-liter aquarium with filtration system and LED lights',
+    price: 200,
+    inStock: true,
+    category: 'Fish',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Aquarium+1',
+      'https://via.placeholder.com/300x200.png?text=Aquarium+2',
+    ],
+  },
+  {
+    id: 5,
+    name: 'Dog Toy',
+    description: 'Durable rubber toy for large dogs',
+    price: 15,
+    inStock: true,
+    category: 'Dogs',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Dog+Toy+1',
+      'https://via.placeholder.com/300x200.png?text=Dog+Toy+2',
+    ],
+  },
+  {
+    id: 6,
+    name: 'Cat Bed',
+    description: 'Comfortable bed for cats with removable cover',
+    price: 40,
+    inStock: true,
+    category: 'Cats',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Cat+Bed+1',
+      'https://via.placeholder.com/300x200.png?text=Cat+Bed+2',
+    ],
+  },
+  {
+    id: 7,
+    name: 'Bird Feeder',
+    description: 'Easy-to-fill feeder for small to medium-sized birds',
+    price: 25,
+    inStock: true,
+    category: 'Birds',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Bird+Feeder+1',
+      'https://via.placeholder.com/300x200.png?text=Bird+Feeder+2',
+    ],
+  },
+  {
+    id: 8,
+    name: 'Fish Tank Decorations',
+    description: 'Colorful decorations for enhancing fish tank environment',
+    price: 30,
+    inStock: true,
+    category: 'Fish',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Fish+Tank+Decor+1',
+      'https://via.placeholder.com/300x200.png?text=Fish+Tank+Decor+2',
+    ],
+  },
+  {
+    id: 9,
+    name: 'Small Animal Cage',
+    description: 'Multi-level cage for small pets like hamsters and gerbils',
+    price: 80,
+    inStock: true,
+    category: 'Small Animals',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Small+Animal+Cage+1',
+      'https://via.placeholder.com/300x200.png?text=Small+Animal+Cage+2',
+    ],
+  },
+  {
+    id: 10,
+    name: 'Dog Leash',
+    description: 'Adjustable leash for small to large dogs',
+    price: 20,
+    inStock: true,
+    category: 'Dogs',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Dog+Leash+1',
+      'https://via.placeholder.com/300x200.png?text=Dog+Leash+2',
+    ],
+  },
+  {
+    id: 11,
+    name: 'Cat Collar',
+    description: 'Stylish collar with bell and adjustable strap',
+    price: 12,
+    inStock: true,
+    category: 'Cats',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Cat+Collar+1',
+      'https://via.placeholder.com/300x200.png?text=Cat+Collar+2',
+    ],
+  },
+  {
+    id: 12,
+    name: 'Dog Shampoo',
+    description: 'Gentle shampoo for sensitive dog skin',
+    price: 18,
+    inStock: true,
+    category: 'Dogs',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Dog+Shampoo+1',
+      'https://via.placeholder.com/300x200.png?text=Dog+Shampoo+2',
+    ],
+  },
+  {
+    id: 13,
+    name: 'Cat Toys',
+    description: 'Assorted toys for active cats',
+    price: 22,
+    inStock: true,
+    category: 'Cats',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Cat+Toys+1',
+      'https://via.placeholder.com/300x200.png?text=Cat+Toys+2',
+    ],
+  },
+  {
+    id: 14,
+    name: 'Bird Bath',
+    description: 'Shallow bath for birds to clean and refresh',
+    price: 15,
+    inStock: true,
+    category: 'Birds',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Bird+Bath+1',
+      'https://via.placeholder.com/300x200.png?text=Bird+Bath+2',
+    ],
+  },
+  {
+    id: 15,
+    name: 'Fish Food',
+    description: 'Premium food for tropical fish',
+    price: 10,
+    inStock: true,
+    category: 'Fish',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Fish+Food+1',
+      'https://via.placeholder.com/300x200.png?text=Fish+Food+2',
+    ],
+  },
+  {
+    id: 16,
+    name: 'Hamster Wheel',
+    description: 'Exercise wheel for small rodents',
+    price: 20,
+    inStock: true,
+    category: 'Small Animals',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Hamster+Wheel+1',
+      'https://via.placeholder.com/300x200.png?text=Hamster+Wheel+2',
+    ],
+  },
+  {
+    id: 17,
+    name: 'Dog Bed',
+    description: 'Orthopedic bed for large dogs',
+    price: 60,
+    inStock: true,
+    category: 'Dogs',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Dog+Bed+1',
+      'https://via.placeholder.com/300x200.png?text=Dog+Bed+2',
+    ],
+  },
+  {
+    id: 18,
+    name: 'Cat Tree',
+    description: 'Multi-level cat tree with scratching posts',
+    price: 100,
+    inStock: true,
+    category: 'Cats',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Cat+Tree+1',
+      'https://via.placeholder.com/300x200.png?text=Cat+Tree+2',
+    ],
+  },
+  {
+    id: 19,
+    name: 'Fish Tank Filter',
+    description: 'High-efficiency filter for 50-liter tanks',
+    price: 35,
+    inStock: true,
+    category: 'Fish',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Fish+Tank+Filter+1',
+      'https://via.placeholder.com/300x200.png?text=Fish+Tank+Filter+2',
+    ],
+  },
+  {
+    id: 20,
+    name: 'Dog Crate',
+    description: 'Collapsible crate for traveling with dogs',
+    price: 75,
+    inStock: true,
+    category: 'Dogs',
+    images: [
+      'https://via.placeholder.com/300x200.png?text=Dog+Crate+1',
+      'https://via.placeholder.com/300x200.png?text=Dog+Crate+2',
+    ],
+  },
+];
+
+// Log the list of products to the console
+console.log(products);
